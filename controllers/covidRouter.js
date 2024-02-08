@@ -11,5 +11,9 @@ router.post("/add",async(req,res)=>{
         status:"success"
     })
 })
+router.get("/viewall",async(req,res)=>{
+    let data=await covidModel.find()
+    res.json(data)
+})
 
 module.exports=router
